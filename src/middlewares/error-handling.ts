@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { AppError } from "@/utils/AppError";
+import { ZodError } from "zod"
 
 export function errorHandling(error: any, request: Request, response: Response, _: NextFunction){
     if( error instanceof AppError){
